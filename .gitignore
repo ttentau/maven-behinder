@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+/.idea
+/target
+/out
+data.db
+readme.txt 
+pom.xml
+maven-test.iml
