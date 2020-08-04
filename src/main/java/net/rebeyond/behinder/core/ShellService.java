@@ -40,8 +40,10 @@ public class ShellService {
         this.currentPassword = shellEntity.getString("password");
         this.currentHeaders = new HashMap();
         this.currentHeaders.put("User-Agent", userAgent);
+        this.currentHeaders.put("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
         if (this.currentType.equals("php")) {
-            this.currentHeaders.put("Content-type", "application/x-www-form-urlencoded");
+            //get请求去掉这个header
+//            this.currentHeaders.put("Content-Type", "application/x-www-form-urlencoded");
         }
 
         this.mergeHeaders(this.currentHeaders, shellEntity.getString("headers"));
